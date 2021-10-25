@@ -21,7 +21,7 @@ pipeline {
                 buildingTag()
             }
             steps {
-                sh echo 'COMPLETED!!'   
+                sh "echo 'COMPLETED!!'"   
             }
         }
     }   
