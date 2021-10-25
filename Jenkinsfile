@@ -10,13 +10,21 @@ pipeline {
     }
     stages {        
         
-        stage('Build') {
+        stages {
+        stage('Compile') {
             steps {
-                echo 'Compiling and building'
                 sh 'go build'
             }
         }
-        
+
+        stage('Release') {
+            when {
+                buildingTag()
+            }
+            steps {
+                sh echo 'COMPLETED!!'   
+            }
+        }
     }
 /*    post {
         always {
