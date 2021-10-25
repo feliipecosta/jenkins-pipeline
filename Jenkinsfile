@@ -5,7 +5,6 @@ pipeline {
     }
     
     stages {        
-        stages {
         environment {
             GO114MODULE = 'on'
             CGO_ENABLED = 0 
@@ -25,5 +24,5 @@ pipeline {
                 sh echo 'COMPLETED!!'   
             }
         }
-    }
+    }   
 }
